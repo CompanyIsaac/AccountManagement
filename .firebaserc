@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "accountmanagem": {
+      "hosting": {
+        "account-management": [
+          "accountmanagem"
+        ]
+      }
+    }
+  }
+}

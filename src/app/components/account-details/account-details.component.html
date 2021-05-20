@@ -1,0 +1,27 @@
+<div *ngIf="currentAccount" class="edit-form" style="margin-bottom: 150px;">
+  <mat-progress-spinner></mat-progress-spinner>
+  <h4>Account</h4>
+  <form>
+    <mat-card class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="currentAccount.name" name="name" />
+
+      <label for="state">State</label>
+      <input type="text" class="form-control" id="state" [(ngModel)]="currentAccount.state" name="state" />
+
+      <label for="accountType">Account type</label>
+      <input type="text" class="form-control" id="accountType" [(ngModel)]="currentAccount.accountType"
+        name="accountType" />
+
+
+      <button style="margin-top: 15px;margin-right: 10px;" mat-raised-button (click)="deleteAccount()">
+        Delete
+      </button>
+
+      <button mat-raised-button type="submit" (click)="updateAccount()">
+        Update
+      </button>
+
+
+    </mat-card>
+  </form>

@@ -1,0 +1,19 @@
+<div class="submit-form">
+  <div *ngIf="!submitted">
+    <mat-card class="form-group">
+      <mat-label for="name">Name</mat-label>
+      <input matInput type="text" class="form-control" id="name" required [(ngModel)]="account.name" name="name" />
+      <mat-label for="state">State</mat-label>
+      <input matInput type="text" class="form-control" id="state" required [(ngModel)]="account.state" name="state" />
+      <mat-label for="accounttype">Account type</mat-label>
+      <input matInput required type="text" class="form-control" id="accounttype" [(ngModel)]="account.accountType"
+        name="accounttype" />
+      <button style="margin-top: 15px;" mat-raised-button (click)="saveAccount()">Submit</button>
+    </mat-card>
+  </div>
+
+  <div *ngIf="submitted" class="d-flex jusitify-items-center">
+    <h4>You submitted successfully!</h4>
+    <button mat-raised-button (click)="newAccount()">Add</button>
+  </div>
+</div>
